@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .set-parameter {
+            background-color: lightcyan;
+            width: 360px;
+            height: 200px;
+            border: 20px solid deepskyblue;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        .center {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 18px;
+        }
+
+        .input {
+            width: 550px;
+            height: 30px;
+            top: 60%;
+        }
+
+        p {
+            display: inline;
+        }
+
+        .myform {
+            top: 60%
+        }
+
+        .simple {
+            width: 25px;
+            height: 30px;
+        }
+
+        .radioalign {
+            vertical-align: middle;
+        }
+
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>project07 Web Search Engine</title>
+</head>
+<body>
+<p>
+<form class="myform" action="Servlet.Display" method="get">
+    <input type="button" onclick="window.location='addAd.jsp'" value="Register Ads"/>
+    <CENTER>
+        <b>INPUT HERE </b><input type="text" name="query" class="input"/>
+        <input type="submit" value="Search"/><br> <br>
+        <div class="set-parameter"><h3>Set-Parameters</h3><br><b> 1-TFIDF, 2-BM25, 3-BM25_Pagerank</b><br>
+            <label><input type="radio" name="score" value="1" checked>1</label>
+            <label><input type="radio" name="score" value="2">2</label>
+            <label><input type="radio" name="score" value="3">3</label> <br>
+            <b>Number of links you want to retrieve ?</b><input type="text" name="k" class="simple"/><br>
+            <b>Images ?</b>
+            <label><input type="radio" name="image" value="0" checked>No</label>
+            <label><input type="radio" name="image" value="1">Yes</label><br>
+            <b>Document Language:</b>
+            <label>
+                <input type="radio" name="language" value="de"/>de
+                <img src="Images/germanflag.jpg" width="25" height="25">
+            </label>
+            <label>
+                <input type="radio" name="language" value="en" checked/>en
+                <img src="Images/britishflag.jpg" width="25" height="25">
+            </label>
+        </div>
+        <div>
+            <img src="Images/search.jpg" alt="" width="600" height="300">
+        </div>
+    </CENTER>
+</form>
+</p>
+</body>
+</html>
